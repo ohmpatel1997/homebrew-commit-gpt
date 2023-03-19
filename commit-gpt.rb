@@ -5,20 +5,20 @@
 class CommitGpt < Formula
   desc ""
   homepage "https://github.com/ohmpatel1997/commit-gpt"
-  version "0.2.5"
+  version "0.2.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.5/commit-gpt_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "58da0a8fd575da71b9b7420733676a148bd8cfd9729f8d99ad93fb9dabe09da6"
+      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.6/commit-gpt_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f82c73d9b1904afddf0091b46bc61d690c18d2ecbee00871724e3ea0b7e8fb2a"
 
       def install
         bin.install "commit-gpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.5/commit-gpt_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "f4707fb91698693c8031881af3d3684bdd5322366c1856e2ad353d48b2f018a0"
+      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.6/commit-gpt_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2f40b01afb6c550cad1516c3da2160b82c123e445844fc3a0b85bdd825540d9f"
 
       def install
         bin.install "commit-gpt"
@@ -28,16 +28,16 @@ class CommitGpt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.5/commit-gpt_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e4b310124da96eaf73d43086847ef6c24c640b4d59437b17d4cfaa0235a8df4c"
+      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.6/commit-gpt_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1777147d1faa8069fb819a332f362d2b37759db4a5367949d2340e726d1642e8"
 
       def install
         bin.install "commit-gpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.5/commit-gpt_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e3cd3fc8dc7894469262b3a940fe8dc0dc20f545fa8c2ef84bdb44a8d75c3c74"
+      url "https://github.com/ohmpatel1997/commit-gpt/releases/download/v0.2.6/commit-gpt_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e3d9081fe013c1cfd7cfd37fa847145d276c27951ab91c670d365e28edc8002b"
 
       def install
         bin.install "commit-gpt"
